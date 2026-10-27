@@ -1,5 +1,9 @@
 # Changelog
 
+## 0.5.6 - 2026-10-27
+
+- README: installing from OpenUPM (`openupm add com.airon.gameview-recorder`, or the scoped registry in `manifest.json`), next to the git URL. No code changes.
+
 ## 0.5.5 - 2026-10-27
 
 - README: gizmos are recorded while the Game view's Gizmos toggle is on (tested with URP's 2D renderer), and recording is verified on macOS / Metal as well as Direct3D. No code changes.

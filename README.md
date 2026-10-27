@@ -7,27 +7,55 @@ Records the Game view in Play Mode, with audio (Unity or Wwise) and optionally t
 You need:
 
 - Unity 6000.0 or newer. The toolbar button needs 6000.3 or newer.
-- git, installed and on PATH: Unity uses it to fetch the package.
 - ffmpeg on every machine that records ([Install ffmpeg](#install-ffmpeg-once-per-machine)).
 
+Install it from [OpenUPM](https://openupm.com/packages/com.airon.gameview-recorder/) or straight from GitHub. Either way the package is read-only in the project. To change it, clone the repository into `Packages/com.airon.gameview-recorder` instead; Unity loads it as an embedded package. To remove it, select it in the Package Manager and press **Remove**.
+
+### Install from OpenUPM
+
+With the [OpenUPM CLI](https://openupm.com/docs/getting-started-cli.html), in the project folder:
+
+```
+openupm add com.airon.gameview-recorder
+```
+
+Or add the OpenUPM registry and the package to `Packages/manifest.json` yourself, next to what's already there:
+
+```json
+{
+  "scopedRegistries": [
+    {
+      "name": "package.openupm.com",
+      "url": "https://package.openupm.com",
+      "scopes": ["com.airon.gameview-recorder"]
+    }
+  ],
+  "dependencies": {
+    "com.airon.gameview-recorder": "0.5.6"
+  }
+}
+```
+
+The Package Manager then lists new versions, and **Update** installs them.
+
 ### Install from GitHub
+
+Unity needs git, installed and on PATH, to fetch the package.
 
 1. **Window > Package Manager**, the **+** button > **Install package from git URL...**
 2. Enter:
 
    ```
-   https://github.com/tosiabunio/unity-gameview-recorder.git#0.5.5
+   https://github.com/tosiabunio/unity-gameview-recorder.git#0.5.6
    ```
 
 Or add the line to `Packages/manifest.json` yourself:
 
 ```json
-"com.airon.gameview-recorder": "https://github.com/tosiabunio/unity-gameview-recorder.git#0.5.5"
+"com.airon.gameview-recorder": "https://github.com/tosiabunio/unity-gameview-recorder.git#0.5.6"
 ```
 
-- `#0.5.5` picks a release; the [tags](https://github.com/tosiabunio/unity-gameview-recorder/tags) list them all. To update, change the tag. Without one, Unity takes the latest commit on `main` and keeps it (in `packages-lock.json`) until you add the URL again.
-- A package installed this way is read-only. To change it, clone the repository into `Packages/com.airon.gameview-recorder` instead; Unity loads it as an embedded package.
-- To remove it, select it in the Package Manager and press **Remove**.
+`#0.5.6` picks a release; the [tags](https://github.com/tosiabunio/unity-gameview-recorder/tags) list them all. To update, change the tag. Without one, Unity takes the latest commit on `main` and keeps it (in `packages-lock.json`) until you add the URL again.
 
 ### Keep recordings out of version control
 
