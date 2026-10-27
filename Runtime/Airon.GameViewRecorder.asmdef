@@ -1,0 +1,24 @@
+{
+    "name": "Airon.GameViewRecorder",
+    "rootNamespace": "Airon.GameViewRecorder",
+    "references": [
+        "Unity.InputSystem"
+    ],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": false,
+    "defineConstraints": [
+        "UNITY_EDITOR"
+    ],
+    "versionDefines": [
+        {
+            "name": "com.unity.inputsystem",
+            "expression": "1.0.0",
+            "define": "GAMEVIEWRECORDER_INPUT_SYSTEM"
+        }
+    ],
+    "noEngineReferences": false
+}

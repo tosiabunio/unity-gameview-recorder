@@ -1,0 +1,27 @@
+{
+  "name": "com.airon.gameview-recorder",
+  "version": "0.5.3",
+  "displayName": "Game View Recorder",
+  "description": "Records the Game view in Play Mode, with audio (Unity or Wwise) and optionally the cursor and clicks, to an MKV or MP4 file at the Game view's resolution. Encodes with ffmpeg.",
+  "unity": "6000.0",
+  "license": "0BSD",
+  "documentationUrl": "https://github.com/tosiabunio/unity-gameview-recorder#readme",
+  "changelogUrl": "https://github.com/tosiabunio/unity-gameview-recorder/blob/main/CHANGELOG.md",
+  "licensesUrl": "https://github.com/tosiabunio/unity-gameview-recorder/blob/main/LICENSE.md",
+  "author": {
+    "name": "Airon",
+    "url": "https://github.com/tosiabunio"
+  },
+  "dependencies": {
+    "com.unity.modules.audio": "1.0.0",
+    "com.unity.modules.screencapture": "1.0.0"
+  },
+  "keywords": [
+    "recorder",
+    "video",
+    "capture",
+    "mkv",
+    "mp4",
+    "ffmpeg"
+  ]
+}

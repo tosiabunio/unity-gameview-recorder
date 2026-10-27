@@ -1,0 +1,25 @@
+{
+    "name": "Airon.GameViewRecorder.Tests.Editor",
+    "rootNamespace": "Airon.GameViewRecorder.Tests",
+    "references": [
+        "Airon.GameViewRecorder",
+        "Airon.GameViewRecorder.Editor",
+        "UnityEngine.TestRunner",
+        "UnityEditor.TestRunner"
+    ],
+    "includePlatforms": [
+        "Editor"
+    ],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": true,
+    "precompiledReferences": [
+        "nunit.framework.dll"
+    ],
+    "autoReferenced": false,
+    "defineConstraints": [
+        "UNITY_INCLUDE_TESTS"
+    ],
+    "versionDefines": [],
+    "noEngineReferences": false
+}
