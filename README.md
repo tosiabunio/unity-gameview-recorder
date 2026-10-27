@@ -16,16 +16,16 @@ You need:
 2. Enter:
 
    ```
-   https://github.com/tosiabunio/unity-gameview-recorder.git#0.5.3
+   https://github.com/tosiabunio/unity-gameview-recorder.git#0.5.4
    ```
 
 Or add the line to `Packages/manifest.json` yourself:
 
 ```json
-"com.airon.gameview-recorder": "https://github.com/tosiabunio/unity-gameview-recorder.git#0.5.3"
+"com.airon.gameview-recorder": "https://github.com/tosiabunio/unity-gameview-recorder.git#0.5.4"
 ```
 
-- `#0.5.3` picks a release; the [tags](https://github.com/tosiabunio/unity-gameview-recorder/tags) list them all. To update, change the tag. Without one, Unity takes the latest commit on `main` and keeps it (in `packages-lock.json`) until you add the URL again.
+- `#0.5.4` picks a release; the [tags](https://github.com/tosiabunio/unity-gameview-recorder/tags) list them all. To update, change the tag. Without one, Unity takes the latest commit on `main` and keeps it (in `packages-lock.json`) until you add the URL again.
 - A package installed this way is read-only. To change it, clone the repository into `Packages/com.airon.gameview-recorder` instead; Unity loads it as an embedded package.
 - To remove it, select it in the Package Manager and press **Remove**.
 

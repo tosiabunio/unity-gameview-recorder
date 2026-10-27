@@ -469,7 +469,13 @@ namespace Airon.GameViewRecorder
                 return;
 
             AudioListener listener = null;
-            foreach (var candidate in Object.FindObjectsByType<AudioListener>(FindObjectsSortMode.None))
+            // The overload with a sort mode is obsolete in newer versions; the one without it is documented from 6000.5.
+#if UNITY_6000_5_OR_NEWER
+            var candidates = Object.FindObjectsByType<AudioListener>();
+#else
+            var candidates = Object.FindObjectsByType<AudioListener>(FindObjectsSortMode.None);
+#endif
+            foreach (var candidate in candidates)
             {
                 if (candidate.isActiveAndEnabled)
                 {

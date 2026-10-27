@@ -1,5 +1,10 @@
 # Changelog
 
+## 0.5.4 - 2026-10-27
+
+- No more CS0618 warning on Unity 6000.5 and newer: the AudioListener lookup uses `FindObjectsByType<T>()`, which replaces the obsolete overload with a sort mode there. Older versions keep the old call.
+- Author in `package.json`: Maciej Miasik.
+
 ## 0.5.3 - 2026-10-27
 
 - README: installing from GitHub is the only setup described. No code changes.
