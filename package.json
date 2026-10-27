@@ -1,6 +1,6 @@
 {
   "name": "com.airon.gameview-recorder",
-  "version": "0.5.6",
+  "version": "0.5.7",
   "displayName": "Game View Recorder",
   "description": "Records the Game view in Play Mode, with audio (Unity or Wwise) and optionally the cursor and clicks, to an MKV or MP4 file at the Game view's resolution. Encodes with ffmpeg.",
   "unity": "6000.0",

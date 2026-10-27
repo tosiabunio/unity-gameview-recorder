@@ -1,5 +1,9 @@
 # Changelog
 
+## 0.5.7 - 2026-10-27
+
+- README: OpenUPM badge with the latest version, linking to the package page. No code changes.
+
 ## 0.5.6 - 2026-10-27
 
 - README: installing from OpenUPM (`openupm add com.airon.gameview-recorder`, or the scoped registry in `manifest.json`), next to the git URL. No code changes.

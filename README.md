@@ -1,5 +1,7 @@
 # Game View Recorder
 
+[![openupm](https://img.shields.io/npm/v/com.airon.gameview-recorder?label=openupm&registry_uri=https://package.openupm.com)](https://openupm.com/packages/com.airon.gameview-recorder/)
+
 Records the Game view in Play Mode, with audio (Unity or Wwise) and optionally the mouse cursor and clicks, to an `.mkv` or `.mp4` file. The video has the Game view's resolution (what `Screen.width × Screen.height` is in Play Mode, letterbox bars and overlay UI included) and a constant frame rate in real time. Gizmos are in the video while the Game view's **Gizmos** toggle is on (tested with URP); turn it off for a clean recording. Editor only. ffmpeg does the encoding.
 
 ## Add it to a project
@@ -31,7 +33,7 @@ Or add the OpenUPM registry and the package to `Packages/manifest.json` yourself
     }
   ],
   "dependencies": {
-    "com.airon.gameview-recorder": "0.5.6"
+    "com.airon.gameview-recorder": "0.5.7"
   }
 }
 ```
@@ -46,16 +48,16 @@ Unity needs git, installed and on PATH, to fetch the package.
 2. Enter:
 
    ```
-   https://github.com/tosiabunio/unity-gameview-recorder.git#0.5.6
+   https://github.com/tosiabunio/unity-gameview-recorder.git#0.5.7
    ```
 
 Or add the line to `Packages/manifest.json` yourself:
 
 ```json
-"com.airon.gameview-recorder": "https://github.com/tosiabunio/unity-gameview-recorder.git#0.5.6"
+"com.airon.gameview-recorder": "https://github.com/tosiabunio/unity-gameview-recorder.git#0.5.7"
 ```
 
-`#0.5.6` picks a release; the [tags](https://github.com/tosiabunio/unity-gameview-recorder/tags) list them all. To update, change the tag. Without one, Unity takes the latest commit on `main` and keeps it (in `packages-lock.json`) until you add the URL again.
+`#0.5.7` picks a release; the [tags](https://github.com/tosiabunio/unity-gameview-recorder/tags) list them all. To update, change the tag. Without one, Unity takes the latest commit on `main` and keeps it (in `packages-lock.json`) until you add the URL again.
 
 ### Keep recordings out of version control
 
