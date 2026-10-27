@@ -1,6 +1,6 @@
 # Game View Recorder
 
-Records the Game view in Play Mode, with audio (Unity or Wwise) and optionally the mouse cursor and clicks, to an `.mkv` or `.mp4` file. The video has the Game view's resolution (what `Screen.width × Screen.height` is in Play Mode, letterbox bars and overlay UI included) and a constant frame rate in real time. Editor only. ffmpeg does the encoding.
+Records the Game view in Play Mode, with audio (Unity or Wwise) and optionally the mouse cursor and clicks, to an `.mkv` or `.mp4` file. The video has the Game view's resolution (what `Screen.width × Screen.height` is in Play Mode, letterbox bars and overlay UI included) and a constant frame rate in real time. Gizmos are in the video while the Game view's **Gizmos** toggle is on (tested with URP); turn it off for a clean recording. Editor only. ffmpeg does the encoding.
 
 ## Add it to a project
 
@@ -16,16 +16,16 @@ You need:
 2. Enter:
 
    ```
-   https://github.com/tosiabunio/unity-gameview-recorder.git#0.5.4
+   https://github.com/tosiabunio/unity-gameview-recorder.git#0.5.5
    ```
 
 Or add the line to `Packages/manifest.json` yourself:
 
 ```json
-"com.airon.gameview-recorder": "https://github.com/tosiabunio/unity-gameview-recorder.git#0.5.4"
+"com.airon.gameview-recorder": "https://github.com/tosiabunio/unity-gameview-recorder.git#0.5.5"
 ```
 
-- `#0.5.4` picks a release; the [tags](https://github.com/tosiabunio/unity-gameview-recorder/tags) list them all. To update, change the tag. Without one, Unity takes the latest commit on `main` and keeps it (in `packages-lock.json`) until you add the URL again.
+- `#0.5.5` picks a release; the [tags](https://github.com/tosiabunio/unity-gameview-recorder/tags) list them all. To update, change the tag. Without one, Unity takes the latest commit on `main` and keeps it (in `packages-lock.json`) until you add the URL again.
 - A package installed this way is read-only. To change it, clone the repository into `Packages/com.airon.gameview-recorder` instead; Unity loads it as an embedded package.
 - To remove it, select it in the Package Manager and press **Remove**.
 
@@ -142,7 +142,7 @@ The video size is fixed at the first frame. If the Game view changes size mid-re
 - Editor and Play Mode only. The runtime assembly has a `UNITY_EDITOR` define constraint, so nothing ships in builds.
 - The Game view must be visible: Unity doesn't render a Game view tab hidden behind another tab, so the video freezes.
 - Sound comes from Unity audio or Wwise, one of them. FMOD isn't supported, and in a project that plays sound through both Unity and Wwise only one is recorded.
-- Needs a graphics API with async GPU readback (all desktop APIs). Tested on Windows / Direct3D 12. The vertical orientation of the screen copy depends on the API: it's flipped for OpenGL and not for Direct3D, Metal or Vulkan. Only Direct3D is verified.
+- Needs a graphics API with async GPU readback (all desktop APIs). Tested on Windows / Direct3D 12 and macOS / Metal. The vertical orientation of the screen copy depends on the API: it's flipped for OpenGL and not for Direct3D, Metal or Vulkan. Direct3D and Metal are verified.
 
 ## Layout
 

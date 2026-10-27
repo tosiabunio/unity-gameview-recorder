@@ -1,5 +1,9 @@
 # Changelog
 
+## 0.5.5 - 2026-10-27
+
+- README: gizmos are recorded while the Game view's Gizmos toggle is on (tested with URP's 2D renderer), and recording is verified on macOS / Metal as well as Direct3D. No code changes.
+
 ## 0.5.4 - 2026-10-27
 
 - No more CS0618 warning on Unity 6000.5 and newer: the AudioListener lookup uses `FindObjectsByType<T>()`, which replaces the obsolete overload with a sort mode there. Older versions keep the old call.
